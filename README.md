@@ -8,9 +8,9 @@
     - [ ] Führung
     - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledig markiert und Testfälle inkl. geänderter Taskliste ins Respository übertragen
 
-- [ ] Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
-    - [ ] Es befinden sich gesamt 3 Fehler im Source Code
-    - [ ] Bei Bedarf Optimieren Sie das Queue Besipiel
+- [x] Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
+    - [x] Es befinden sich gesamt 3 Fehler im Source Code
+    - [x] Bei Bedarf Optimieren Sie das Queue Besipiel
     - Ergänzen Sie das Beispiel nach eigenen Ermessen um es testen zu können
 
 - [ ] Erstellen Sie für Klasse und alle  Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
