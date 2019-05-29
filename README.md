@@ -3,7 +3,7 @@
 ## To Do
 
 - [x] Übertragen Angabe Taskliste in Markdown Readme
-- [ ] Einspielen Queue Vorlage aus Respository: https://github.com/michaelulm/software-configuration-managment/tree/master/test-automation/Queue
+- [x] Einspielen Queue Vorlage aus Respository: https://github.com/michaelulm/software-configuration-managment/tree/master/test-automation/Queue
 - [ ] Taskergebnisse Schritt für Schritt auf Git erstellen
     - [ ] Führung
     - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledig markiert und Testfälle inkl. geänderter Taskliste ins Respository übertragen
