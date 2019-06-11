@@ -54,51 +54,67 @@
         </plugins>
     </build>
 
-    <reporting>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>3.0.0-M3</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.7.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-clover-plugin</artifactId>
-          <version>2.4</version>
-        </plugin>
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <reportSets>
-              <!-- reports our javadocs in our src code and test code -->
-              <reportSet>
-                <reports>
-                  <report>javadoc</report>
-                  <report>test-javadoc</report>
-                </reports>
-              </reportSet>
+     <reporting>
+        <plugins>
 
-              <!-- aggregate reportSet, to define in poms having modules -->
-              <reportSet>
-                <id>aggregate</id>
-                  <inherited>false</inherited><!-- don't run aggregate in child modules -->
-                  <reports>
-                  <report>aggregate</report>
-                </reports>
-              </reportSet>
-            </reportSets>
-            <version>3.1.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-      </plugins>
+            <!-- maven site for documentation -->
+			<!-- manual upgraded maven site plugin, because 3.3 had an error -->
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+			<!-- reporting project information -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+			  <version>3.0.0</version>
+            </plugin>
+
+            <!-- java doc support for maven site -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <reportSets>
+
+                    <!-- reports our javadocs in our src code and test code -->
+                    <reportSet>
+                        <reports>
+                            <report>javadoc</report>
+                            <report>test-javadoc</report>
+                        </reports>
+                    </reportSet>
+
+					<!-- aggregate reportSet, to define in poms having modules -->
+                    <reportSet>
+                        <id>aggregate</id>
+                        <inherited>false</inherited><!-- don't run aggregate in child modules -->
+                        <reports>
+                            <report>aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+
+            <!-- integrate test results -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+
+            <!-- Cross References -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+            </plugin>
+
+            <!-- integrate test Code Coverage -->
+            <plugin>
+                <artifactId>maven-clover-plugin</artifactId>
+            </plugin>
+
+        </plugins>
     </reporting>
 
     <dependencies>

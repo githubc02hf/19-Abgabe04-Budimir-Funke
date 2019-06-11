@@ -31,7 +31,7 @@ public class StringQueue implements Queue {
 	 * Adds the element String obj to the queue. If the addition is successful, the
 	 * method returns true else false.
 	 * 
-	 * @param obj
+	 * @param obj A String object to be added to the queue is given as parameter
 	 * @return true if the addition is successful else false
 	 */
 	@Override
