@@ -8,21 +8,30 @@
     <artifactId>Queue</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <url>httsp://github.com/githubc02hf/19-Abgabe04-Budimir-Funke</url>
+
 	<developers>
 		<developer>
-		  <id>michaelulm</id>
-		  <name>Michael Ulm</name>
-		  <email>michael.ulm@fh-joanneum.at</email>
-		  <url>https://www.michael-ulm.at</url>
-		  <organization>FH JOANNEUM GmbH</organization>
-		  <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+		  <id>Mr.Budimir</id>
+		  <name>Ivica Budimir</name>
+		  <email>ivica.buimir@edu.campus02.at</email>
+		  <organization>Campus02</organization>
+		  <organizationUrl>https://www.campus02.at</organizationUrl>
 		  <roles>
-			<role>Lecturer</role>
+			<role>Student</role>
 		  </roles>
 		  <timezone>Europe/Vienna</timezone>
-		  <properties>
-			<picUrl>https://avatars2.githubusercontent.com/u/15637184</picUrl>
-		  </properties>
+      </developer>
+		<developer>
+		  <id>githubc02hf</id>
+		  <name>Henrik Funke</name>
+		  <email>henrik.funke@edu.campus02.at</email>
+		  <organization>Campus02</organization>
+		  <organizationUrl>https://www.campus02.at</organizationUrl>
+		  <roles>
+			<role>Student</role>
+		  </roles>
+		  <timezone>Europe/Vienna</timezone>
 		</developer>     
 	</developers>
 	
@@ -36,8 +45,61 @@
                     <release>11</release>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
         </plugins>
     </build>
+
+    <reporting>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>3.0.0-M3</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-clover-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <reportSets>
+              <!-- reports our javadocs in our src code and test code -->
+              <reportSet>
+                <reports>
+                  <report>javadoc</report>
+                  <report>test-javadoc</report>
+                </reports>
+              </reportSet>
+
+              <!-- aggregate reportSet, to define in poms having modules -->
+              <reportSet>
+                <id>aggregate</id>
+                  <inherited>false</inherited><!-- don't run aggregate in child modules -->
+                  <reports>
+                  <report>aggregate</report>
+                </reports>
+              </reportSet>
+            </reportSets>
+            <version>3.1.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </reporting>
 
     <dependencies>
         <dependency>
@@ -45,6 +107,16 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+           <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.1</version>
         </dependency>
     </dependencies>
 </project>
