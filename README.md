@@ -49,12 +49,16 @@ Für das Builden sind ebenfalls plugins notwendig. Dies sind vor allem maven com
     - [x] Ergebnisse (Konsolenausgabe) als Bild in Dokumentation einfließen lassen.
     Screenshot gemacht auf Ubuntu eines Laufes in eclipse
 
-- [ ] Maven Site Dokumentation erstellen
-    - [ ] Inklusive Javadoc Code und Javadoc Test Klassen
-    - [ ] Inklusive Menü mit Verweis auf manuell erstellte Seite
-        - [ ] Seite erläutert Funktionsweise Queue
-    - [ ] Geben Sie ein Bild der Maven Site Dokumentation in den Lab Report
-        - [ ] Der Inhalt der manuell erstellten Seite sollte ersichtlich sein Konfigurationsmanagement Vertiefende Gesamtwiederholung Arbeitsaufträge.docx Seite 5 von 6 Institut Internettechnologien und -Anwendungen
+- [x] Maven Site Dokumentation erstellen
+    - [x] Inklusive Javadoc Code und Javadoc Test Klassen
+    Das Einbinden der JavaDoc und der TestKlassen war sehr einfach, da diese bereits schon durch Maven vor der Site Generation erstellt worden war und nur noch korrekt verlinkt werden musste. Diese Verlinkungen wurde innerhalb der site.xml erreicht mittels dem Menu Eintrag und zugleich Verlinkung <menu ref="reports">
+    - [x] Inklusive Menü mit Verweis auf manuell erstellte Seite
+    Der Verlink zum selbsterstellen Seite war wie der Link zu den reports einfach mittels eines href-Links auf die relative position zu erreichen. Die selbstgeschriebene Seite wurde im Ordner markdown unter dem src/site Ordner angelegt.
+        - [x] Seite erläutert Funktionsweise Queue
+        In der Datei src/site/markdown/Queue.md wurde eine kurze Beschreibung der Datenstruktur Queue und Ihrer Operationen beschrieben.
+    - [x] Geben Sie ein Bild der Maven Site Dokumentation in den Lab Report
+    Zwei Screenshots: Einmal von der index.html aus und einmal von der Queue.html
+        - [x] Der Inhalt der manuell erstellten Seite sollte ersichtlich sein
 
 - [ ] Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
     - [ ] Übertragung Information aus Labreport Template.

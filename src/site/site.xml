@@ -8,6 +8,9 @@
             <item name="githubc02hf Repository" href="https://github.com/githubc02hf/"/>
         </links>
 
+        <menu name="Queue">
+          <item name="Queue" href="Queue.html"/>
+          </menu>
         <menu ref="reports"/>
 
     </body>
