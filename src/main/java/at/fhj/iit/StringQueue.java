@@ -8,13 +8,13 @@ import org.apache.logging.log4j.Logger;
 
 // there's some Bugs included, try to debug the code and fix the Bugs
 // there are different Bugs, wrong implementation, typos, ...
-// write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
+// write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilities of your IDE
 
 /**
  * Using the queue methods
  * 
  * @author Ivica Budimir
- * @author Henrik Funnke
+ * @author Henrik Funke
  * @version 11.06.2019
  */
 public class StringQueue implements Queue {

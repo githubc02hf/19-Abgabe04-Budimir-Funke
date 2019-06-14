@@ -18,13 +18,21 @@ Zur Fehlersuche haben wir den fehlerhaften Source-Code in unserer Entwicklungsum
     - [x] Bei Bedarf Optimieren Sie das Queue Besipiel
     - Ergänzen Sie das Beispiel nach eigenen Ermessen um es testen zu können
 
-- [ ] Erstellen Sie für Klasse und alle  Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
-    - [ ] Integrieren Sie ein Bild (der generierten Dokumentation) in ihren Report
+- [x] Erstellen Sie für Klasse und alle Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
+    Um eine API Dokumentation mittels Javadoc zu erzeugen, müssen bestimmte Konventionen und Richtlinien eingehalten werden. Ein Javadoc Kommentar wird vor einer Klasse oder Methode geschrieben und besteht aus zwei Teilen: Eine Beschreibung gefolgt von Tags. In unserer Aufgabe haben wir hauptsächlich die Tags @return sowie @param für Methoden verwendet und @author sowie @version für Klassen. In Maven Site wurde dann die Javadoc eingebunden bzw. war diese bereits eingebunden.
+    - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in ihren Report
+    Ein Screenshot wurden von der generieten Dokumentation gemacht.
 
-- [ ] Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
-    - [ ] Sie werden die „selben“ Testfälle mehrfach erstellen müssen um „mehrere Variationen“ für einen möglichst vollständigen Test zu erreichen. Achten Sie dabei mit unterschiedlichen Daten zu testen.
-    - [ ] JavaDoc Kommentare erstellen.
-    - [ ] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
+    
+
+- [x] Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
+    - [x] Sie werden die „selben“ Testfälle mehrfach erstellen müssen um „mehrere Variationen“ für einen möglichst vollständigen Test zu erreichen. Achten Sie dabei mit unterschiedlichen Daten zu testen.
+      Tests sind eine wichtiger bestandteil in der Softwareentwicklung, daher wurden von uns die methoden offer(), poll(), remove(), peek() und element() getestet. Hier haben wir hauptsächlich Assert.assertTrue, Assert.assertFalse und Assert.assertEquals verwendet. Bevor wir die methoden getestet haben, wurde am anfang das Setup aufgebaut. Danach wurden die Funktionalität getestet, wie z.B das Hinzufügen eines Strings mit offer() oder das Löschen und Zurückliefern des ersten Elements mit remove(). In der Dokumentation sind alle Tests beschrieben.
+    - [x] JavaDoc Kommentare erstellen.
+     Genau wie zuvor wurden hier auch Javadoc Kommentare geschrieben, jedoch waren hier für die Test-Methoden keine Tags, wie @return notwendig, sondern es wurden nur die Beschreibungen verfasst.
+    - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
+    Hier wurde ebenfalls ein Schreenshot erstellt.
+
 
 - [x] Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
 Für die pom.xml mussten einige Anpassungen gemacht werden. Als erstes müssen Developer und Project Informationen angegeben werden. Bei uns waren dass persönliche Daten und Campus02 Daten. Danach mussten sowohl die plugins erweitert werden als auch die Dependencies. Für den Log4J2-Logger mussten die entsprechenden Dependencies (api und core) eingefügt werden.
