@@ -5,9 +5,10 @@
 - [x] Übertragen Angabe Taskliste in Markdown Readme
 - [x] Einspielen Queue Vorlage aus Respository: https://github.com/michaelulm/software-configuration-managment/tree/master/test-automation/Queue
 Zum Übertragen der Queue Vorlage haben wir das angegebene Repository gecloned um es lokal zu haben und dann den Queue Ordner kopiert in unser Repository. Nur der notwendige src Ordner und die pom.xml wurden übertragen.
-- [ ] Taskergebnisse Schritt für Schritt auf Git erstellen
-    - [ ] Führung
-    - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledig markiert und Testfälle inkl. geänderter Taskliste ins Respository übertragen
+- [x] Taskergebnisse Schritt für Schritt auf Git erstellen
+    - [x] Führung
+    - [x] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Respository übertragen
+    Nach jeder erledigten Task wurde das jeweilige Kästchen mit einem "x" markiert.
 
 - [x] Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
 Zur Fehlersuche haben wir den fehlerhaften Source-Code in unserer Entwicklungsumgebung geöffnet und genau nach Fehlern durchforstet. Uns sind die drei Fehler relativ schnell aufgefallen, da sie offensichtlich keinen Sinn ergeben haben. Alle Fehler waren in src/main/at/fhl/iit/StringQueue.java
@@ -27,7 +28,7 @@ Zur Fehlersuche haben wir den fehlerhaften Source-Code in unserer Entwicklungsum
 
 - [x] Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
     - [x] Sie werden die „selben“ Testfälle mehrfach erstellen müssen um „mehrere Variationen“ für einen möglichst vollständigen Test zu erreichen. Achten Sie dabei mit unterschiedlichen Daten zu testen.
-      Tests sind eine wichtiger bestandteil in der Softwareentwicklung, daher wurden von uns die methoden offer(), poll(), remove(), peek() und element() getestet. Hier haben wir hauptsächlich Assert.assertTrue, Assert.assertFalse und Assert.assertEquals verwendet. Bevor wir die methoden getestet haben, wurde am anfang das Setup aufgebaut. Danach wurden die Funktionalität getestet, wie z.B das Hinzufügen eines Strings mit offer() oder das Löschen und Zurückliefern des ersten Elements mit remove(). In der Dokumentation sind alle Tests beschrieben.
+      Tests sind eine wichtiger bestandteil in der Softwareentwicklung, daher wurden von uns die methoden offer(), poll(), remove(), peek() und element() getestet. Hier haben wir hauptsächlich Assert.assertTrue, Assert.assertFalse und Assert.assertEquals verwendet. Bevor wir die methoden getestet haben, wurde am Anfang das Setup aufgebaut. Danach wurden die Funktionalität getestet, wie z.B das Hinzufügen eines Strings mit offer() oder das Löschen und Zurückliefern des ersten Elements mit remove(). In der Dokumentation sind alle Tests beschrieben.
     - [x] JavaDoc Kommentare erstellen.
      Genau wie zuvor wurden hier auch Javadoc Kommentare geschrieben, jedoch waren hier für die Test-Methoden keine Tags, wie @return notwendig, sondern es wurden nur die Beschreibungen verfasst.
     - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
@@ -59,7 +60,7 @@ Für das Builden sind ebenfalls plugins notwendig. Dies sind vor allem maven com
 
 - [x] Maven Site Dokumentation erstellen
     - [x] Inklusive Javadoc Code und Javadoc Test Klassen
-    Das Einbinden der JavaDoc und der TestKlassen war sehr einfach, da diese bereits schon durch Maven vor der Site Generation erstellt worden war und nur noch korrekt verlinkt werden musste. Diese Verlinkungen wurde innerhalb der site.xml erreicht mittels dem Menu Eintrag und zugleich Verlinkung <menu ref="reports">
+    Das Einbinden der JavaDoc und der TestKlassen war sehr einfach, da diese bereits durch Maven vor der Site Generation erstellt worden war und nur noch korrekt verlinkt werden musste. Diese Verlinkungen wurde innerhalb der site.xml erreicht mittels dem Menu Eintrag und zugleich Verlinkung <menu ref="reports">
     - [x] Inklusive Menü mit Verweis auf manuell erstellte Seite
     Der Verlink zum selbsterstellen Seite war wie der Link zu den reports einfach mittels eines href-Links auf die relative position zu erreichen. Die selbstgeschriebene Seite wurde im Ordner markdown unter dem src/site Ordner angelegt.
         - [x] Seite erläutert Funktionsweise Queue
@@ -69,9 +70,25 @@ Für das Builden sind ebenfalls plugins notwendig. Dies sind vor allem maven com
         - [x] Der Inhalt der manuell erstellten Seite sollte ersichtlich sein
 
 - [ ] Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
-    - [ ] Übertragung Information aus Labreport Template.
-    - [ ] Alle Schritte dieser Übung nachvollziehbar erläutern.
-    - [ ] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
+    - [x] Übertragung Information aus Labreport Template.
+    Informationen wurden von Anfang an im README.md geschrieben.
+    - [x] Alle Schritte dieser Übung nachvollziehbar erläutern.
+    Unter jeder Task wurden die Schritte erklärt.
+    - [x] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
+    ```python
+    def print_text():
+        s = "Python"
+        s2 = " is good"
+        print s + s2
+    ```
+    ```java
+    public void printText() {
+        String s = "java";
+        String s2 = " is better";
+        System.out.print(s+s2);
+    }
+    ```
+    Um Source Code korrekt darzustellen wurden 3 Backticks vor dem Codeblock und 3 Backticks nach dem Codblock geschrieben.
     - [ ] Korrekturlesen Dokumentation
     - [ ] PDF erstellen (zB Dillinger)
 
