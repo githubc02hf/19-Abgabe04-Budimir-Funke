@@ -58,7 +58,7 @@ public class StringQueueTest {
 		String s1 = "test1";
 		String s2 = "test2";
 		q1.offer(s1);
-		q2.offer(s2);
+		q1.offer(s2);
 		Assert.assertEquals(s1, q1.poll());
 		Assert.assertEquals(s2, q1.poll());
 		Assert.assertNotEquals(s2, q1.poll());
@@ -79,10 +79,9 @@ public class StringQueueTest {
 		String s1 = "test1";
 		String s2 = "test2";
 		q1.offer(s1);
-		q2.offer(s2);
+		q1.offer(s2);
 		Assert.assertEquals(s1, q1.remove());
 		Assert.assertEquals(s2, q1.remove());
-		Assert.assertNotEquals(s2, q1.remove());
 
 		String s3 = "test3";
 		q2.offer(s3);
